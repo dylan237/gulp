@@ -1,0 +1,18 @@
+@import "functions";
+@import "helpers/variables";
+@import "mixins";
+
+@import "card";
+
+$primary-color: blue;
+
+body {
+    color: $primary-color;
+}
+
+.test {
+    transform: rotate(140deg);
+    filter: blur(3px) ;
+    display: flex;
+    align-items: center;
+}

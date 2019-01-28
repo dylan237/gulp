@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+@@include('./meta.html', {"title":"測試","linkcss":"all"})
+</head>
+<body>
+<!-- include -->
+@@include('./var.html', {
+  "name": "haoxin",
+  "age": 12345,
+  "socials": {
+    "fb": "facebook.com/include",
+    "tw": "twitter.com/include"
+  }
+})
+<!-- if -->
+@@include('if.html', { "nav": true })
+<!-- if2 -->
+@@include('./if2.html',{
+  "index": "active1",
+  "about": "active",
+  "contact": "active"
+})
+<!-- for -->
+  <ul>@@for (var i = 0; i < arr.length; i++) {
+    <li>`+arr[i]+`</li>}
+  </ul>
+<!-- loop -->
+@@loop('loop.html', [
+  { "title": "My post title", "text": "<p>lorem ipsum...</p>" },
+  { "title": "Another post", "text": "<p>lorem ipsum...</p>" },
+  { "title": "One more post", "text": "<p>lorem ipsum...</p>" }
+])
+<!-- loop + JSON-->
+@@loop("loop.html", "json/data.json")
+
+</body>
+</html>

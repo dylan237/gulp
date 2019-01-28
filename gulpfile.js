@@ -28,10 +28,6 @@ gulp.task('clean', function () {
         .pipe($.clean())
 });
 
-gulp.task('nm', function () {
-    console.log('rimraf node_modules');
-});
-
 // 共用html合併
 gulp.task( 'fileinclude', function () {
     return gulp.src(['./source/**/*.html','!source/partial/**'])
